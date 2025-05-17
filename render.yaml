@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: health-predictor
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python ashu.py"
+    plan: free
+    envVars:
+      - key: PORT
+        value: 5000
